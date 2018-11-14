@@ -4,7 +4,7 @@ pipeline {
         stage('send metadata') {
             steps {
                 echo "building ${BUILD_NUMBER} ${currentBuild.currentResult}"
-                echo "changesets: ${currentBuild.changeSets}"
+                echo "commit: ${GIT_COMMIT}"
                 bat "send_build_metadata.bat"
             }
         }
