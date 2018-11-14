@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "building ${BUILD_NUMBER} ${currentBuild.currentResult}"
+                echo "changesets: ${currentBuild.changeSets}"
             }
         }
     }
