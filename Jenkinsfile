@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "building ${BUILD_NUMBER}"
+                echo "building ${BUILD_NUMBER} ${currentBuild.currentResult}"
             }
         }
     }
